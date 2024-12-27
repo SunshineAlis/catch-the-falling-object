@@ -138,12 +138,12 @@ function gameStart() {
     j = 0,
     firstInt = setInterval(firstFunction, timeInt);
   // timeInt = 1500;
-
+  //jims unagadag
   function firstFunction() {
     // if game is over stop this function
-    // if (isGameOver) {
-    //   return;
-    // }
+    if (isGameOver) {
+      return;
+    }
 
     let ran = Math.floor(Math.random() * 940);
     fruits[i].style.left = ran + "px";
@@ -155,8 +155,8 @@ function gameStart() {
   }
   setTimeout(() => {
     let secondInt = setInterval(secondFunction, timeInt);
-  }, 2900);
-
+  }, 2000);
+  //2,9secund bol unah hurd; 2.9
   function secondFunction() {
     // if game is over stop this function
     // if (isGameOver) {
@@ -186,7 +186,48 @@ function gameStart() {
       // basket shake animation
       //   shakeBasket();
     } else {
-      //   lives = live_u(lives);
+      lives = live_u(lives);
     }
   }
+  function live_u(lives) {
+    lives -= 1;
+    console.log(lives);
+    if (lives == 2) {
+      document.getElementById("liveCont").removeChild(liveIcon2);
+    } else if (lives == 1) {
+      document.getElementById("liveCont").removeChild(liveIcon3);
+    } else if (lives == 0) {
+      document.getElementById("liveCont").removeChild(liveIcon1);
+      gameOver();
+    }
+    return lives;
+  }
+}
+
+let isGameOver = false;
+function gameOver() {
+  // togloom duussaniig tumend tugee !!
+  isGameOver = true;
+
+  // remove basket
+  gameCont.removeChild(basket);
+  /////
+  //   gameOverSound.play();
+  // game over text
+
+  const gameOverMessage = document.createElement("div");
+  gameOverMessage.className = "gameOverMessage";
+  gameOverMessage.innerHTML = `
+    <h1>Game Over</h1>
+    <p>Your score: ${score}</p>
+    `;
+  gameCont.appendChild(gameOverMessage);
+
+  // stop background m    usic
+  //   backgroundMusic.pause();
+
+  // restart the game
+  gameOverMessage.onclick = function () {
+    window.location.reload();
+  };
 }
