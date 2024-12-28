@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fallTime: 2s;
+  --fallTime1: 4.4s;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.gameCont {
+  margin-top: 30px;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+  position: relative;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.startButton {
+  position: absolute;
+  font-size: 80px;
+  font-family: fantasy;
+  background-color: yellow;
+  padding: 20px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.sideBar {
+  margin-top: 30px;
+  width: 300px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 0px 0px;
+}
+
+/* Fruit */
+.fruit {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 75px;
+  background-size: cover;
+  z-index: 1;
+  top: -100px;
+}
+.hidden {
+  display: none;
+}
+.animate {
+  animation: float var(--fallTime) cubic-bezier(0.22, 0.01, 0.7, 0.24);
+}
+.animate1 {
+  animation: float1 var(--fallTime1) cubic-bezier(0.22, 0.01, 0.7, 0.24);
+}
+.apple {
+  background-image: url("./apple.png");
+}
+.strawberry {
+  background-image: url("./strawberry.png");
+}
+.banana {
+  background-image: url("./banana.png");
+}
+.cherry {
+  background-image: url("./cherry.png");
+}
+@keyframes float {
+  0% {
+    top: 0px;
+  }
+  100% {
+    display: none;
+    top: 900px;
+  }
+}
+@keyframes float1 {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: 900px;
+  }
+}
+
+/*Basket*/
+.basket {
+  width: 150px;
+  height: 105px;
+  top: 1030px;
+  position: absolute;
+  transition: 0.1s linear;
+}
+.basket img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Score & Live */
+.scoreContainer {
+  width: 300px;
+  height: 150px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: fantasy;
+  font-size: 200%;
+  border-radius: 15px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.liveCont {
+  width: 300px;
+  height: 150px;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: fantasy;
+  gap: 5px;
+}
+.liveIcon {
+  width: 50px;
+  height: 50px;
+  background-image: url("./heart.png");
+}
+.difficultySelector {
+  margin-top: 20px;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+h3 {
+  font-family: cursive;
+  color: #333;
+}
+
+.difficultySelector select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  color: #333;
+  transition: border 0.3s ease;
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  font-family: 'Trebuchet MS';
+}
+
+.gameOverMessage {
+  position: absolute;
+  font-size: 60px;
+  font-family: fantasy;
+  background-color: yellow;
+  padding: 20px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.basket.shake {
+  animation: shake 0.5s ease-in-out;
+}
+.circle-button {
+  width: 100%;
+  aspect-ratio: 1/1.2;
+  background-color: #bcdb40;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  /* transition: transform 0.2s ease;*/
+}
