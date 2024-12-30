@@ -15,11 +15,12 @@
   margin:auto;
   gap: 40px;
   width:80%;
+  height: 930px;
 }
 .gameCont {
   margin-top: 30px;
   width: 100%;
-  height:1000px;
+  height:930px;
   overflow: hidden;
   position: relative;
   background-image: url("./background.jpg");
@@ -46,7 +47,7 @@
 .sideBar {
   margin-top: 30px;
   width: 25%;
-  height: 1000px;
+  height: 930px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -135,7 +136,7 @@
 }
 
 .liveCont {
-  width: 65%;
+  width: 100%;
   height: 10%;
   border-radius: 15px;
   color: #333;
@@ -148,13 +149,13 @@
   gap: 5px;
 }
 .liveIcon {
-  width: 19%;
-  height: 55%;
+  width: 48px;
+  height: 55px;
   background-image: url("./heart.png");
 }
 .difficultySelector {
   margin-top: 20px;
-  width: 65%;
+  width: 96%;
   text-align: center;
   display:flex;
   flex-direction: column;
@@ -211,7 +212,7 @@ h3 {
 .basket.shake {
   animation: shake 0.5s ease-in-out;
 }
-.circle-button {
+/* .circle-button {
   width: 100%;
   aspect-ratio: 1/1.2;
   background-color: #bcdb40;
@@ -222,4 +223,4 @@ h3 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   /* transition: transform 0.2s ease;*/
-}
+/* } */ 
