@@ -29,7 +29,7 @@ let lives = 3;
 
 // Score container
 const scoreContainer = document.createElement("div");
-scoreContainer.innerHTML = "score: " + score;
+scoreContainer.innerHTML = "Score: " + score;
 scoreContainer.classList.add("scoreContainer");
 scoreContainer.id = "scoreContainer";
 
@@ -56,8 +56,6 @@ livesCont.appendChild(liveIcon3);
 // Audio objects
 const scoreAudio = new Audio("./scoresound.wav");
 const gameOverSound = new Audio("./gameoversound.wav");
-// const backgroundMusic = new Audio("./background.mp3");
-// backgroundMusic.loop = true;
 
 // Default falling speed
 let timeInt = 2000;
@@ -74,9 +72,8 @@ let apple = [],
   arr = [];
 
 function gameStart() {
-  basket.style.top = "930px";
+  basket.style.top = "85%";
   start.style.display = "none";
-//   backgroundMusic.play();
 
   let position = { left: basket.offsetLeft };
 
@@ -137,9 +134,9 @@ function gameStart() {
 
   function firstFunction() {
     if (isGameOver) return;
-    let ran = Math.floor(Math.random() * 940);
-    fruits[i].style.left = ran + "px";
-    fruits[i].style.top = "-100px";
+    let ran = Math.floor(Math.random() * 90);
+    fruits[i].style.left = ran + "%";
+    fruits[i].style.top = "-10%";
     fruits[i].classList.add("animate");
     i++;
     arr.push(ran);
@@ -156,11 +153,11 @@ function gameStart() {
   }
 
   function score_check(ran) {
-    let leftEdge = position.left - 30;
-    let rightEdge = leftEdge + 150;
+    let leftEdge = position.left / containerWidth * 100;
+    let rightEdge = leftEdge + (basketWidth / containerWidth * 100);
     if (leftEdge <= ran && rightEdge >= ran) {
       score += 1;
-      scoreContainer.innerHTML = "score: " + score;
+      scoreContainer.innerHTML = "Score: " + score;
     } else {
       lives = updateLives(lives);
       scoreAudio.currentTime = 0;

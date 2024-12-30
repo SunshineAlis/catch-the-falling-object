@@ -12,13 +12,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  margin:auto;
+  gap: 40px;
   width:80%;
 }
 .gameCont {
   margin-top: 30px;
-  width: 1000px;
-  height: 1000px;
+  width: 100%;
+  height:1000px;
   overflow: hidden;
   position: relative;
   background-image: url("./background.jpg");
@@ -27,11 +28,13 @@
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+ 
+
 }
 
 .startButton {
   position: absolute;
-  font-size: 80px;
+  font-size: 300%;
   font-family: fantasy;
   background-color: yellow;
   padding: 20px 40px;
@@ -42,7 +45,7 @@
 
 .sideBar {
   margin-top: 30px;
-  width: 300px;
+  width: 25%;
   height: 1000px;
   display: flex;
   flex-direction: column;
@@ -55,8 +58,8 @@
   display: block;
   position: absolute;
   bottom: 0;
-  width: 60px;
-  height: 75px;
+  width: 50px;
+  height: 60px;
   background-size: cover;
   z-index: 1;
   top: -100px;
@@ -105,8 +108,8 @@
 
 /*Basket*/
 .basket {
-  width: 150px;
-  height: 105px;
+  width: 15%;
+  height: 10%;
   top: 1030px;
   position: absolute;
   transition: 0.1s linear;
@@ -118,22 +121,22 @@
 
 /* Score & Live */
 .scoreContainer {
-  width: 300px;
-  height: 150px;
+  width: 65%;
+  height: 10%;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: fantasy;
-  font-size: 200%;
+  font-size: 150%;
   border-radius: 15px;
   color: #333;
   background: rgba(255, 255, 255, 0.8);
 }
 
 .liveCont {
-  width: 300px;
-  height: 150px;
+  width: 65%;
+  height: 10%;
   border-radius: 15px;
   color: #333;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
@@ -145,12 +148,13 @@
   gap: 5px;
 }
 .liveIcon {
-  width: 50px;
-  height: 50px;
+  width: 19%;
+  height: 55%;
   background-image: url("./heart.png");
 }
 .difficultySelector {
   margin-top: 20px;
+  width: 65%;
   text-align: center;
   display:flex;
   flex-direction: column;
