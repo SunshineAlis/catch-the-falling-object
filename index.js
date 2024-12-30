@@ -72,7 +72,7 @@ let apple = [],
   arr = [];
 
 function gameStart() {
-  basket.style.top = "93%";
+  basket.style.top = "85%";
   start.style.display = "none";
 
   let position = { left: basket.offsetLeft };

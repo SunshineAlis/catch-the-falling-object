@@ -15,12 +15,12 @@
   margin:auto;
   gap: 40px;
   width:80%;
-  height: 930px;
+  height: 800px;
 }
 .gameCont {
   margin-top: 30px;
   width: 100%;
-  height:930px;
+  height:800px;
   overflow: hidden;
   position: relative;
   background-image: url("./background.jpg");
@@ -110,7 +110,7 @@
 /*Basket*/
 .basket {
   width: 15%;
-  height: 10%;
+  height: 20%;
   top: 1030px;
   position: absolute;
   transition: 0.1s linear;
